@@ -1,5 +1,5 @@
 server:
-  port: 8181
+  port: 8282
 eureka:
   client:
     serviceUrl:
@@ -8,8 +8,5 @@ eureka:
     metadata-map:
       instanceId: ${spring.application.name}:${random.value}
 
-zuul:
-  routes:
-    facade:
-      path: /**
-      service-id: aggregator-service
+turbine:
+  cluster-name-expression: 'default'
